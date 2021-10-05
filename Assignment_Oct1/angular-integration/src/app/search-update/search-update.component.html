@@ -1,0 +1,25 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+    <div class="row">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12" style="text-align: center">
+                <input type="text" class="search-query form-control" placeholder="Search with Pin Code" name="pincode" [(ngModel)]="pincode" />
+                <input type="text" class="search-query form-control" placeholder="Search with First Name" name="firstname" [(ngModel)]="firstname" />
+                <input type="text" class="search-query form-control" placeholder="Search with SurName" name="surname" [(ngModel)]="surname" />
+                <input type="text" class="search-query form-control" placeholder="Delete with Soft Delete" name="softdelete" [(ngModel)]="softdelete" />
+                <input type="text" class="search-query form-control" placeholder="Delete with userId" name="userid" [(ngModel)]="userid" />
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button" (click)="findByUserDetails()">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    <button class="btn btn-danger" type="button" (click)="deleteUser()">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

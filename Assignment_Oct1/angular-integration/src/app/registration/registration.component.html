@@ -1,0 +1,74 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="userId"><span class="req">* </span> User ID: <small>This will be the userid to Login</small> </label>
+                        <input required type="text" [(ngModel)]="user.userid" name="userId" id="userId"
+                            class="form-control" maxlength="28" placeholder="Enter your UserId" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="dob"><span class="req">* </span> DOB: <small>Date of Birth</small> </label>
+                        <input required type="text" [(ngModel)]="user.dob" name="dob" id="dob"
+                            class="form-control" maxlength="28" placeholder="Enter your DOB" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="joiningDate"><span class="req">* </span> Joining Date: <small>Joining Date</small> </label>
+                        <input required type="text" [(ngModel)]="user.joiningdate" name="joiningDate" id="joiningDate"
+                            class="form-control" maxlength="28" placeholder="Enter your Joining Date" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="firstName"><span class="req">* </span> First Name: <small>First Name</small> </label>
+                        <input required type="text" [(ngModel)]="user.firstname" name="firstName" id="firstName"
+                            class="form-control" maxlength="28" placeholder="Enter your DOB" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="surName"><span class="req">* </span> Last Name: <small>Last Name</small> </label>
+                        <input required type="text" [(ngModel)]="user.surname" name="surName" id="surName"
+                            class="form-control" maxlength="28" placeholder="Enter your SurName" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="mobile"><span class="req">* </span> Mobile: <small>Mobile</small> </label>
+                        <input required type="text" [(ngModel)]="user.mobile" name="mobile" id="mobile"
+                            class="form-control" maxlength="10" placeholder="Enter your Mobile" />
+					</div>
+					
+					<div class="form-group">
+                        <label for="address"><span class="req">* </span> Address: <small>Address</small> </label>
+                        <input required type="text" [(ngModel)]="user.address" name="address" id="address"
+                            class="form-control" maxlength="100" placeholder="Enter your Address" />
+                    </div>
+
+					<div class="form-group">
+                        <label for="pincode"><span class="req">* </span> Pincode: <small>Pincode</small> </label>
+                        <input required type="text" [(ngModel)]="user.pincode" name="pincode" id="pincode"
+                            class="form-control" maxlength="6" placeholder="Enter your PinCode" />
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="userRegistration()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
